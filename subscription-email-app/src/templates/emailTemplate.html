@@ -3,54 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Special Offer</title>
+    <title>This Week's Benefits</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background: #f4f6fa;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
-        .container {
-            max-width: 600px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        .main-container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+            padding: 32px 24px;
         }
-        h1 {
+        .title {
+            text-align: center;
+            font-size: 1.6em;
+            margin-bottom: 24px;
             color: #333;
+            font-weight: bold;
         }
-        p {
-            font-size: 16px;
-            line-height: 1.5;
-            color: #555;
+        .products-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 18px;
         }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #28a745;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
+        .product-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+            width: 210px;
+            padding: 18px 14px 16px 14px;
+            box-sizing: border-box;
+            position: relative;
+            text-align: center;
         }
-        .footer {
-            margin-top: 20px;
-            font-size: 12px;
+        .discount-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: #23b47e;
+            color: #fff;
+            font-size: 0.95em;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+        .product-img {
+            width: 90px;
+            height: 120px;
+            object-fit: contain;
+            margin-bottom: 12px;
+        }
+        .product-title {
+            font-size: 1em;
+            color: #222;
+            margin-bottom: 8px;
+            min-height: 40px;
+        }
+        .price-row {
+            margin-bottom: 6px;
+        }
+        .current-price {
+            color: #23b47e;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-right: 6px;
+        }
+        .old-price {
             color: #aaa;
+            text-decoration: line-through;
+            font-size: 0.98em;
+            margin-right: 6px;
+        }
+        .save-amount {
+            color: #23b47e;
+            font-size: 0.98em;
+            font-weight: bold;
+            display: block;
+        }
+        .stars {
+            color: #f5b301;
+            font-size: 1em;
+            margin-bottom: 2px;
+        }
+        .rating {
+            color: #888;
+            font-size: 0.95em;
+        }
+        @media (max-width: 900px) {
+            .products-row {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product-card {
+                width: 90%;
+                margin-bottom: 18px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Exclusive Offer Just for You!</h1>
-        <p>Dear Subscriber,</p>
-        <p>We are excited to present you with an exclusive offer on our latest products. Don't miss out on this opportunity to save big!</p>
-        <a href="https://www.example.com/offer" class="button">Claim Your Offer</a>
-        <p>Thank you for being a valued subscriber!</p>
-        <div class="footer">
-            <p>If you wish to unsubscribe, please click <a href="https://www.example.com/unsubscribe">here</a>.</p>
+    <div class="main-container">
+        <div class="title" style="padding-bottom:18px;">
+            <img src="https://d3t4nwcgmfrp9x.cloudfront.net/upload/black-friday-2023-estrategia-1-643x342.png" alt="Black Friday" style="max-width:100%;height:auto;border-radius:8px;">
+        </div>
+        <!-- Página principal -->
+        <div style="text-align:center; margin-bottom: 20px;">
+            <a href="https://xcloud-au.com/" style="color:#23b47e;font-size:1.08em;text-decoration:underline;">
+                https://xcloud-au.com/
+            </a>
+        </div>
+        <div class="products-row">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="discount-badge">34% OFF</div>
+                <img class="product-img" src="https://xcloud-au.com/uploads/143988/cart/resources/20250718/d233c34aac1058caac7a6fcaa134684f.png?x-oss-process=image/resize,m_lfit,w_656" alt="Double Happiness Classic x 10 packs">
+                <div class="product-title">Double Happiness Classic x 10 packs</div>
+                <div class="price-row">
+                    <span class="current-price">AU$ 99.00</span>
+                    <span class="old-price">AU$ 150.00</span>
+                </div>
+                <span class="save-amount">SaveAU$ 51.00</span>
+                <div class="stars">★★★★★</div>
+                <div class="rating">(5.0)</div>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="discount-badge">37% OFF</div>
+                <img class="product-img" src="https://xcloud-au.com/uploads/143988/cart/resources/20250922/13e84a20ab61a266e3c23efa2e1914af.png?x-oss-process=image/resize,m_lfit,w_656" alt="Marlboro (Hard White) US Edition x 10 packs">
+                <div class="product-title">Marlboro (Hard White) US Edition x 10 packs</div>
+                <div class="price-row">
+                    <span class="current-price">AU$ 99.00</span>
+                    <span class="old-price">AU$ 159.00</span>
+                </div>
+                <span class="save-amount">SaveAU$ 60.00</span>
+                <div class="stars">★★★★★</div>
+                <div class="rating">(5.0)</div>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="discount-badge">40% OFF</div>
+                <img class="product-img" src="https://xcloud-au.com/uploads/143988/cart/resources/20251101/5e06b3fb22eb7a2583fa143d48f7ad54.png?x-oss-process=image/resize,m_lfit,w_656" alt="Manchester Sapphire Blue x 10pack">
+                <div class="product-title">Manchester Sapphire Blue x 10pack</div>
+                <div class="price-row">
+                    <span class="current-price">AU$ 119.00</span>
+                    <span class="old-price">AU$ 199.00</span>
+                </div>
+                <span class="save-amount">SaveAU$ 80.00</span>
+                <div class="stars">★★★★★</div>
+                <div class="rating">(5.0)</div>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="discount-badge">66% OFF</div>
+                <img class="product-img" src="https://xcloud-au.com/uploads/143988/cart/resources/20251009/a878fc2ab0340e9fb89373c5a69239d7.jpg?x-oss-process=image/resize,m_lfit,w_656" alt="Al Fakher Crown Bar 15000 Promax Two apple">
+                <div class="product-title">Al Fakher Crown Bar 15000 Promax Two apple</div>
+                <div class="price-row">
+                    <span class="current-price">AU$ 15.00</span>
+                    <span class="old-price">AU$ 45.00</span>
+                </div>
+                <span class="save-amount">SaveAU$ 30.00</span>
+                <div class="stars">★★★★★</div>
+                <div class="rating">(5.0)</div>
+            </div>
+        </div>
+        <!-- Botón de compra -->
+        <div style="text-align:center; margin-top: 32px;">
+            <a href="https://xcloud-au.com/?currency=AUD" 
+               style="background:#23b47e;color:#fff;text-decoration:none;padding:16px 38px;border-radius:8px;font-size:1.1em;font-weight:bold;display:inline-block;">
+                Shop Now!
+            </a>
         </div>
     </div>
 </body>

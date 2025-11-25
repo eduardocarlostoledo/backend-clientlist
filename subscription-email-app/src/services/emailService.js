@@ -51,11 +51,14 @@ const sendOfferEmail = async (email) => {
 
 const sendConfirmationEmail = async (email) => {
     try {
+        const templatePath = path.join(__dirname, '../templates/emailTemplate.html');
+        const html = await readTemplate(templatePath);
+
         const mailOptions = {
             from: process.env.EMAIL_FROM,
             to: email,
             subject: 'Welcome! Subscription Confirmed',
-            html: '<h1>Welcome!</h1><p>Thank you for subscribing to our newsletter.</p>'
+            html: html
         };
 
         return new Promise((resolve, reject) => {

@@ -6,6 +6,7 @@ const validateEmail = (email) => {
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 const subscribe = (subscriptionModel, emailService) => async (req, res) => {
+    console.log('Received subscription request:', req.body);
     const { email } = req.body;
 
     if (!validateEmail(email)) {
