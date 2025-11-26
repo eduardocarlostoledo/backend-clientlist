@@ -16,7 +16,11 @@ const transporter = nodemailer.createTransport({
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASSWORD
-    }
+    },
+    tls: {
+    // Esto asegura que la conexión no falle por certificados autofirmados
+    rejectUnauthorized: true // Dejar en true para producción, o probar con false en local si hay problemas.
+  }
 });
 
 const readTemplate = (templatePath) => new Promise((resolve, reject) => {
