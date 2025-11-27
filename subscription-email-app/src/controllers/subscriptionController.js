@@ -20,7 +20,7 @@ const subscribe = (subscriptionModel, emailService) => async (req, res) => {
         }
 
         const newSubscription = await subscriptionModel.create(email);
-        emailService.sendConfirmationEmail(email).catch(err => console.error('Email error:', err));
+        //emailService.sendConfirmationEmail(email).catch(err => console.error('Email error:', err));
 
         return res.status(201).json({ message: 'Subscription successful', subscription: newSubscription });
     } catch (error) {
